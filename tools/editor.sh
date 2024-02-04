@@ -1,2 +1,2 @@
 cd tools
-docker-compose run --build --rm editor ?@
+docker-compose run --build --rm editor $@
