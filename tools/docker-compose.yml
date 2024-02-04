@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  editor:
+    image: node:20 
+    working_dir: /website
+    entrypoint: bash
+    volumes:
+      - ../website:/website:rw
+    ports:
+      - ${PORT:-3000}:3000
+  bash:
+    image: node:20 
+    working_dir: /project
+    entrypoint: bash
+    volumes:
+      - ..:/project:rw
